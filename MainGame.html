@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>Main Game</title>
+</head>
+<body>
+    <div class="div1"></div>
+    <div onclick="changeStyle(); mnum++;" class="pic"><img class="image" src='/minors/1.jpeg'></div>
+    <div class="pop1">
+        <p class="timeup">
+            Time's Up
+        </p>
+        <img class="pedsimg" src="pedos/darke.jpeg">
+        <p class="uare">
+            You are 
+        </p>
+        <p class="urscore">
+            You Scored  
+        </p>
+    </div>
+    <script>
+        let mnum = 0;
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function changeStyle() {
+            document.querySelector('.pic').style.top = `${getRandomInt(2, 861)}px`;
+            document.querySelector('.pic').style.left = `${getRandomInt(2, 1811)}px`;
+            document.querySelector('.image').src = `/minors/${getRandomInt(1, 20)}.jpeg`;
+        }
+        function showPopup() {
+            if (mnum >= 18) {
+                document.querySelector('.uare').innerHTML = 'You are DRAKE'
+            }
+            if (mnum < 18 && mnum >= 15) {
+                document.querySelector('.uare').innerHTML = 'You are DrDisrespect'
+                document.querySelector('.pedsimg').src = 'pedos/dr.jpeg';
+            }
+            if (mnum < 15 && mnum >= 10) {
+                document.querySelector('.uare').innerHTML = 'You are Dream'
+                document.querySelector('.pedsimg').src = 'pedos/dream.jpeg';
+            }
+            if (mnum < 10 && mnum >= 5) {
+                document.querySelector('.uare').innerHTML = 'You are Chris'
+                document.querySelector('.pedsimg').src = 'pedos/chris.jpeg';
+            }
+            if (mnum < 5 && mnum >= 0) {
+                document.querySelector('.uare').innerHTML = 'No Worries U will get good'
+                document.querySelector('.pedsimg').src = 'pedos/bes.png';
+            }
+            document.querySelector('.pic').style.top = `400px`;
+            document.querySelector('.pic').style.left = `900px`;
+            document.querySelector('.urscore').innerHTML = `You Scored ${mnum} minors`
+            document.querySelector('.pop1').style.zIndex = '2';
+        }
+        setTimeout(showPopup, 10000);
+
+    </script>
+</body>
+</html>
