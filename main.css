@@ -1,12 +1,11 @@
 body{
     margin: 0px;
-    position: relative;
 }
 .div1{
     z-index: 1;
-    height: 964px;
-    width: 1912px;
-    background-color: rgb(110, 105, 105);
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(180, 175, 175);
     margin: 0px;
     position: absolute;
 }
@@ -14,10 +13,12 @@ body{
     z-index: 1;
     border-radius: 50px;
     position: relative;
-    top: 400px;
-    left: 900px;
+    top: 50%;
+    left: 50%;
     width: 100px;
     height: 100px;
+    transform: translate(-50%, -50%);
+    box-shadow:5px 5px 10px 0px rgb(77, 78, 71);
 }
 .image{
     border-radius: 50px;
@@ -27,45 +28,59 @@ body{
 }
 .pop1{
     z-index: 0;
-    position: relative;
-    top: 100px;
-    left: 40%;
-    background-color: rgb(236, 202, 202);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(207, 147, 147);
     height: 500px;
     width: 500px;
     border-radius: 20px;
+    transform: translate(-50%, -50%);
+    box-shadow:10px 10px 10px -3px rgb(16, 17, 13);
 }
 .pedsimg{
     position: absolute;
-    left: 30%;
+    left: 50%;
+    transform: translate(-50%);
     top: 50px;
     height: 40%;
-    width: 40%;
+    Width: 40%;
     object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(16, 17, 13);
 }
 .timeup{
+    z-index: 2;
     position: absolute;
-    font-size: 20px;
+    font-size: 60px;
     font-family: arial;
-    top: 10px;
-    left: 42%;
-    color: rgb(10, 219, 167);
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(30, 255, 0);
     margin: 0px;
+    text-shadow: 3px 3px 5px rgb(16, 17, 13);
+    opacity: 0;
+    transition: opacity 1700ms, top 1700ms;
+    z-index: -1;
+
 }
 .uare{
     position: absolute;
     margin: 0px;
-    left: 38%;
+    left: 50%;
+    transform: translate(-50%);
     top: 265px;
     font-family: arial;
-    font-size:20px;
+    font-size:25px;
 }
 .urscore{
-    color: blueviolet;
+    color: rgb(62, 44, 80);
     position: absolute;
     margin: 0px;
-    left: 15%;
-    top: 400px;
+    left: 50%;
+    top: 390px;
     font-family: arial;
-    font-size:40px;
+    font-size: 25px;
+    transform: translate(-50%);
 }
