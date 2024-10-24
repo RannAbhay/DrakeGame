@@ -5,18 +5,19 @@
     <title>Main Game</title>
 </head>
 <body>
-    <div class="div1"></div>
-    <div onclick="changeStyle(); mnum++;" class="pic"><img class="image" src='minors/1.jpeg'></div>
+    <p class="timeup">
+        Time's Up
+    </p>
+    <div class="div1">
+        <div onclick="changeStyle(); mnum++;" class="pic"><img class="image" src='minors/1.jpeg'></div>
+    </div>
     <div class="pop1">
-        <p class="timeup">
-            Time's Up
-        </p>
         <img class="pedsimg" src="pedos/darke.jpeg">
         <p class="uare">
             You are 
         </p>
         <p class="urscore">
-            You Scored  
+            You Scored 13 minors
         </p>
     </div>
     <script>
@@ -27,8 +28,8 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         function changeStyle() {
-            document.querySelector('.pic').style.top = `${getRandomInt(2, 861)}px`;
-            document.querySelector('.pic').style.left = `${getRandomInt(2, 1811)}px`;
+            document.querySelector('.pic').style.top = `${getRandomInt(10, 90)}%`;
+            document.querySelector('.pic').style.left = `${getRandomInt(10, 90)}%`;
             document.querySelector('.image').src = `minors/${getRandomInt(1, 20)}.jpeg`;
         }
         function showPopup() {
@@ -51,13 +52,18 @@
                 document.querySelector('.uare').innerHTML = 'No Worries U will get good'
                 document.querySelector('.pedsimg').src = 'pedos/bes.png';
             }
-            document.querySelector('.pic').style.top = `400px`;
-            document.querySelector('.pic').style.left = `900px`;
-            document.querySelector('.urscore').innerHTML = `You Scored ${mnum} minors`
-            document.querySelector('.pop1').style.zIndex = '2';
+            document.querySelector('.pic').style.opacity = `0`;
+            document.querySelector('.pic').style.top = `50%`;
+            document.querySelector('.pic').style.left = `50%`;
+            document.querySelector('.timeup').style.zIndex = '2';
+            document.querySelector('.timeup').style.opacity = '1';
+            document.querySelector('.timeup').style.top = `50%`;
+            setTimeout(() => {
+                document.querySelector('.urscore').innerHTML = `You Scored ${mnum} minors`
+                document.querySelector('.pop1').style.zIndex = '2';
+            }, 2500);
         }
         setTimeout(showPopup, 10000);
-
     </script>
 </body>
 </html>
