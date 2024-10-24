@@ -1,46 +1,27 @@
 body{
-    position: relative;
     margin: 0px;
 }
 .drake{
-    display: inline-block;
     position: absolute;
-    top: 40px;
-    left: 35%;
+    left: 50%;
     font-family: arial;
     font-size: 100px;
     margin: 0px;
     color: rgb(97, 95, 94);
+    transform: translate(-50%);
 }
 .game{
-    position: absolute;
-    display: inline-block;
-    font-family: arial;
-    top: 40px;
-    left: 50%;
-    font-size: 100px;
-    margin: 0px;
     color: rgb(204, 41, 196);
-}
-.what{
-    position: absolute;
-    display: inline-block;
-    font-family: arial;
-    top: 240px;
-    left: 35%;
-    font-size: 40px;
-    margin: 0px;
-    color: rgb(193, 204, 41);
 }
 .minor{
     position: absolute;
-    display: inline-block;
     font-family: arial;
-    top: 330px;
-    left: 33%;
-    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    font-size: 25px;
     margin: 0px;
     color: rgb(182, 84, 27);
+    transform: translate(-50%);
 }
 .start{
     background-color: aqua;
@@ -49,34 +30,15 @@ body{
     position: absolute;
     display: inline-block;
     font-family: arial;
-    top: 450px;
-    left: 40%;
+    top: 54%;
+    left: 50%;
     font-size: 30px;
     margin: 0px;
     color: rgb(138, 128, 224);
     border: none;
     border-radius: 10px;
+    transform: translate(-50%);
 }
 .start:hover{
     cursor: pointer;
-}
-.note{
-    position: absolute;
-    display: inline-block;
-    font-family: arial;
-    top: 800px;
-    left: 30%;
-    font-size: 50px;
-    margin: 0px;
-    color: rgb(255, 0, 0);
-}
-.note1{
-    position: absolute;
-    display: inline-block;
-    font-family: arial;
-    top: 800px;
-    left: 41%;
-    font-size: 50px;
-    margin: 0px;
-    color: rgb(255, 0, 0);
 }
