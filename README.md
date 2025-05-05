@@ -1,1 +1,1 @@
-I was 17 when I made this
+In my defense, I made this game when I was 17 and didn’t touch a single line after I turned 18.
